@@ -9561,31 +9561,795 @@
     "groupTitle": "11_PulmonaryTuberculosis"
   },
   {
-    "success": {
+    "group": "12_UserInfo",
+    "type": "GET",
+    "url": "getUserInfoDetails",
+    "title": "02、获取患者详情",
+    "description": "<p>描述：用户基本信息表所有内容</p>",
+    "version": "1.0.0",
+    "name": "getUserInfoDetails_02_______",
+    "parameter": {
       "fields": {
-        "Success 200": [
+        "功能请求参数": [
           {
-            "group": "Success 200",
-            "optional": false,
-            "field": "varname1",
-            "description": "<p>No type.</p>"
-          },
-          {
-            "group": "Success 200",
+            "group": "功能请求参数",
             "type": "String",
             "optional": false,
-            "field": "varname2",
-            "description": "<p>With type.</p>"
+            "field": "id",
+            "description": "<p>患者id</p>"
           }
         ]
       }
     },
-    "type": "",
-    "url": "",
-    "version": "0.0.0",
-    "filename": "./doc/main.js",
-    "group": "F______________doc_main_js",
-    "groupTitle": "F______________doc_main_js",
-    "name": ""
+    "success": {
+      "fields": {
+        "data元素对象属性": [
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>现住址</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "regAddress",
+            "description": "<p>户籍地址</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "description": "<p>本人电话)</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "villageName",
+            "description": "<p>村/小区名称(村（居）委会名称)</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "townName",
+            "description": "<p>乡/镇名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "organizationUid",
+            "description": "<p>建档单位(医生所在单位)</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "organizationName",
+            "description": "<p>建档单位名称(医生所在单位)</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "doctorName",
+            "description": "<p>责任医生</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "recordDate",
+            "description": "<p>建档日期</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "nationCd",
+            "description": "<p>民族\t\t01汉族,02蒙古族,03回族,04藏族,05维吾尔族,06苗族,07彝族,08壮族,09布依族,10朝鲜族,11满族,12侗族,13瑶族,14白族,15土家族,16哈尼族,17哈萨克族,18傣族,19黎族,20傈僳族,21佤族,22畲族,23高山族,24拉祜族,25水族,26东乡族,27纳西族,28景颇族,29柯尔克孜族,30土族,31达斡尔族,32仫佬族,33羌族,34布朗族,35撒拉族,36毛南族,37仡佬族,38锡伯族,39阿昌族,40普米族,41塔吉克族,42怒族,43乌孜别克族,44俄罗斯族,45鄂温克族,46崩龙族,47保安族,48裕固族,49京族,50塔塔尔族,51独龙族,52鄂伦春族,53赫哲族,54门巴族,55珞巴族,56基诺族,97其他,98外国血统中国籍人士</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "nationName",
+            "description": "<p>民族名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "identityCardCd",
+            "description": "<p>身份证件-类别代码\t  01居民身份证,02居民户口簿,03护照,04军官证,05驾驶证,06港澳居民来往内地通行证,07台湾居民来往内地通行证,99其他法定有效证件</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "identityCard",
+            "description": "<p>身份证件-号码</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "birthDate",
+            "description": "<p>出生日期</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "age",
+            "description": "<p>年龄</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "genderCd",
+            "description": "<p>性别 \t1男性,2女性,9未说明的性别,0未知的性别</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "genderName",
+            "description": "<p>性别名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "wokingUnitName",
+            "description": "<p>工作单位名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "linkman",
+            "description": "<p>联系人姓名</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "linkmanPhone",
+            "description": "<p>联系人电话</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "adRegisterMark",
+            "description": "<p>常住类型 0户籍 1 非户籍</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "aboCd",
+            "description": "<p>ABO血型\t\t1:A型,2:B型,3:O型,4:AB型,5:不详</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "aboName",
+            "description": "<p>ABO血型名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "rhCd",
+            "description": "<p>RH血型 0不是 1是 99不详</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "rhName",
+            "description": "<p>RH血型名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "edBgCd",
+            "description": "<p>文化程度\t\t1:研究生,2:大学本科,3:大学专科和专科学校,4:中等专业学校,5:技工学校,6:高中,7:初中,8:小学,9:文盲或半文盲,10:不详</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "edBgName",
+            "description": "<p>文化程度名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "occuTypeCd",
+            "description": "<p>职业\t\t0:国家机关、党群组织、企业、事业单位负责人,1:专业技术人员,2:办事人员和有关人员,3:商业、服务业人员,4:农、林、牧、渔水利业生产人员,5:生产、运输设备操作人员及有关人员,6:军人,7:不便分类的其他从业人员,8:无职业</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "occuTypeName",
+            "description": "<p>职业名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "maritalStCd",
+            "description": "<p>婚姻情况\t\t1:未婚,2:已婚,3:丧偶,4:离婚,5:未说明的婚姻状况</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "maritalStName",
+            "description": "<p>婚姻情况名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "signBeginDate",
+            "description": "<p>签约日期</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "signEndDate",
+            "description": "<p>签约到期日期</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicareWorkerBase",
+            "description": "<p>城镇职工基本医疗保险 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicareDenizenBase",
+            "description": "<p>城镇居民基本医疗保险 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicareCountryside",
+            "description": "<p>新型农村合作医疗 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicarePoor",
+            "description": "<p>贫因救助 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicareBusinessMedicare",
+            "description": "<p>商业医疗保险 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicarePublic",
+            "description": "<p>全公费 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicarePrivate",
+            "description": "<p>全自费 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "medicareOther",
+            "description": "<p>其他</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "signType",
+            "description": "<p>签约状态 0待签约 1已签约 9已过期</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isAllergy",
+            "description": "<p>是否有药物过敏 1有 0没有</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "allergyQingmeisu",
+            "description": "<p>青霉素 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "allergyHuangan",
+            "description": "<p>磺胺 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "allergyLianmeisu",
+            "description": "<p>链霉素 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "allergyOther",
+            "description": "<p>其他过敏</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isExpose",
+            "description": "<p>是否有暴露史 1有 0没有</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "exposerChemistry",
+            "description": "<p>化学品 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "exposerNarcotics",
+            "description": "<p>有毒品 1有 0没有</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "exposerRadiation",
+            "description": "<p>射线 1有 0没有</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isDisease",
+            "description": "<p>疾病史标志 0否 1是\t\t01:无,02:高血压,03:糖尿病,04:冠心病,05:慢性阻塞性肺疾病,06:恶性肿瘤,07:脑卒中,08:严重精神障碍,09:肺结核,10:肝炎,11:先天畸形,12:职业病,13:肾脏疾病,14:贫血,98:其他法定传染病,99:其他</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isOperation",
+            "description": "<p>手术标志 0否 1是</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "operationReason1",
+            "description": "<p>手术原因1</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "operationDate1",
+            "description": "<p>手术时间1</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "operationReason2",
+            "description": "<p>手术原因2</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "operationDate2",
+            "description": "<p>手术时间2</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isTrauma",
+            "description": "<p>外伤标志 0否 1是</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "traumaReason1",
+            "description": "<p>外伤原因1</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "traumaDate1",
+            "description": "<p>外伤时间1</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "traumaReason2",
+            "description": "<p>外伤原因2</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "traumaDate2",
+            "description": "<p>外伤时间2</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isTransfusion",
+            "description": "<p>输血标志 0否 1是</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "transfusionReason1",
+            "description": "<p>输血原因1</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "transfusionDate1",
+            "description": "<p>输血时间1</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "transfusionReason2",
+            "description": "<p>输血原因2</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "transfusionDate2",
+            "description": "<p>输血时间2</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isFamilyDisease",
+            "description": "<p>家族疾病史标志 0否 1是</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isGenetic",
+            "description": "<p>遗传病史标志 0否 1是</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "geneticName",
+            "description": "<p>遗传病名称</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "isDisability",
+            "description": "<p>无残疾 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "disabilityVision",
+            "description": "<p>视力残疾 1是 0 否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "disabilityHearing",
+            "description": "<p>听力残疾 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "disabilityLanguage",
+            "description": "<p>语言残疾 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "disabilityLimbs",
+            "description": "<p>肢体残疾 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "disabilityIntelligence",
+            "description": "<p>智力残疾 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "disabilitySpirit",
+            "description": "<p>精神残疾 1是 0否</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "disabilityOther",
+            "description": "<p>其他残疾</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "kitchenExhaustFacCd",
+            "description": "<p>厨房排风设施代码\t1:油烟机,2:换气扇,3:烟囱,9:其他</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "fuelTypeCd",
+            "description": "<p>燃料类型代码\t1:液化气,2:煤,3:天然气,4:沼气,5:柴火,9:其他</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "waterTypeCd",
+            "description": "<p>饮水类型代码\t1:自来水,2:经净化过滤的水,3:井水,4:河湖水,5:塘水,9:其他</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "toiletTypeCd",
+            "description": "<p>厕所类型代码\t1:卫生厕所,2:一个或二格粪池式,3:马桶,4:露天粪坑,5:简易棚厕,9:其他</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "livestockTypeCd",
+            "description": "<p>禽畜栏类型代码\t1:无,2:单设,3:室内,4:室外</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "执行成功示例\":",
+          "content": "{\n    \"errcode\": 200,\n    \"errmsg\":\"success\",\n    \"data\": {\n\n    }\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "filename": "./getPublicHealthFollow.js",
+    "groupTitle": "12_UserInfo"
+  },
+  {
+    "group": "12_UserInfo",
+    "type": "GET",
+    "url": "getUserInfoList",
+    "title": "01、获取患者信息列表",
+    "description": "<p>描述：用户基本信息</p>",
+    "version": "1.0.0",
+    "name": "getUserInfoList_01_________",
+    "parameter": {
+      "fields": {
+        "功能请求参数": [
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>医生id</p>"
+          },
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "orgId",
+            "description": "<p>机构id</p>"
+          },
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "currentPage",
+            "description": "<p>当前页</p>"
+          },
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "pageSize",
+            "description": "<p>每页条数，10、20、30...</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "data元素对象属性": [
+          {
+            "group": "data元素对象属性",
+            "type": "Array",
+            "optional": false,
+            "field": "list",
+            "description": "<p>患者列表数据</p>"
+          },
+          {
+            "group": "data元素对象属性",
+            "type": "Object",
+            "optional": false,
+            "field": "page",
+            "description": "<p>分页对象</p>"
+          }
+        ],
+        "list数组内属性": [
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": ""
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "age",
+            "description": "<p>年龄 0男，1女</p>"
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "sex",
+            "description": "<p>性别 \t1男性,2女性,9未说明的性别,0未知的性别</p>"
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>现住址</p>"
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "birthDate",
+            "description": "<p>出生日期 2019-02-02</p>"
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "identityCard",
+            "description": "<p>身份证件-号码</p>"
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "recordDate",
+            "description": "<p>建档日期 2019-02-02</p>"
+          },
+          {
+            "group": "list数组内属性",
+            "type": "String",
+            "optional": false,
+            "field": "signType",
+            "description": "<p>签约状态 0待签约 1已签约 9已过期</p>"
+          }
+        ],
+        "page内对象属性": [
+          {
+            "group": "page内对象属性",
+            "type": "int",
+            "optional": false,
+            "field": "totalPageCount",
+            "description": "<p>当前页总条数</p>"
+          },
+          {
+            "group": "page内对象属性",
+            "type": "int",
+            "optional": false,
+            "field": "totalCount",
+            "description": "<p>实际总条数</p>"
+          },
+          {
+            "group": "page内对象属性",
+            "type": "int",
+            "optional": false,
+            "field": "pageSize",
+            "description": "<p>每页显示条数</p>"
+          },
+          {
+            "group": "page内对象属性",
+            "type": "int",
+            "optional": false,
+            "field": "currentPage",
+            "description": "<p>当前页</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "执行成功示例\":",
+          "content": "{\n    \"errcode\": 200,\n    \"errmsg\":\"success\",\n    \"data\": {\n        \"list\":[\n            {\n                id:\"\"\n                name:\"\",\n                idcard:\"\",\n                phone:\"\",\n                address:\"\",\n                signType:\"\"\n            },{\n                id:\"\"\n                name:\"\",\n                idcard:\"\",\n                phone:\"\",\n                address:\"\",\n                signType:\"\"\n            },{\n                id:\"\"\n                name:\"\",\n                idcard:\"\",\n                phone:\"\",\n                address:\"\",\n                signType:\"\"\n            }\n        ],\n        \"page\": {\n             \"totalCount\":20,\n             \"totalPageCount\":1,\n             \"currentPage\":1,\n             \"pageSize\":20\n        }\n    }\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "filename": "./getPublicHealthFollow.js",
+    "groupTitle": "12_UserInfo"
   }
 ]
