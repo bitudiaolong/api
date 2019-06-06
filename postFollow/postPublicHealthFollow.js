@@ -652,16 +652,16 @@
  */
 
 /**
- * @apiGroup 03.UserInfo
- * @api {POST} userBase 01、用户基本信息
- * @apiDescription  描述：包含于第三版个人基本信息表、以及签约相关信息
+ * @apiGroup 03.baseInfo
+ * @api {POST} /open/userinfo/baseInfo 01、新建档案
+ * @apiDescription  描述：该接口对应第三版个人基本信息表
  * @apiVersion 1.0.0
- * @apiName userBase 01、用户基本信息
+ * @apiName /open/userinfo/baseInfo 01、新建档案
  *
  * @apiParam (功能请求参数) {String} name  姓名
  * @apiParam (功能请求参数) {String} address  现住址
  * @apiParam (功能请求参数) {String} regAddress  户籍地址
- * @apiParam (功能请求参数) {String} phone  本人电话)
+ * @apiParam (功能请求参数) {String} phone  本人电话
  * @apiParam (功能请求参数) {String} villageName  村/小区名称(村（居）委会名称)
  * @apiParam (功能请求参数) {String} townName  乡/镇名称
  * @apiParam (功能请求参数) {String} organizationUid  建档单位(医生所在单位)
@@ -701,25 +701,6 @@
  * @apiParam (功能请求参数) {int} 	 medicarePrivate  全自费 1是 0否
  * @apiParam (功能请求参数) {String} medicareOther  其他
  * @apiParam (功能请求参数) {int} 	 signType  签约状态 0待签约 1已签约 9已过期
- *
- * @apiSuccessExample {JSON} 执行成功示例":
- *  {
- *      "errcode": 200,
- *      "errmsg":"success",
- *      "data": {
- *
- *      }
- *  }
- */
-
-/**
- * @apiGroup 03.UserInfo
- * @api {POST} userInfo 02、用户信息
- * @apiDescription  描述：包含于第三版个人基本信息表
- * @apiVersion 1.0.0
- * @apiName userInfo 02、用户信息
- *
- * @apiParam (功能请求参数) {String} identityCard  身份证
  * @apiParam (功能请求参数) {int} 	 isAllergy  是否有药物过敏 1有 0没有
  * @apiParam (功能请求参数) {int} 	 allergyQingmeisu  青霉素 1是 0否
  * @apiParam (功能请求参数) {int} 	 allergyHuangan  磺胺 1是 0否
@@ -761,7 +742,6 @@
  * @apiParam (功能请求参数) {String} waterTypeCd  饮水类型代码	1:自来水,2:经净化过滤的水,3:井水,4:河湖水,5:塘水,9:其他
  * @apiParam (功能请求参数) {String} toiletTypeCd  厕所类型代码	1:卫生厕所,2:一个或二格粪池式,3:马桶,4:露天粪坑,5:简易棚厕,9:其他
  * @apiParam (功能请求参数) {String} livestockTypeCd  禽畜栏类型代码	1:无,2:单设,3:室内,4:室外
- *
  * @apiSuccessExample {JSON} 执行成功示例":
  *  {
  *      "errcode": 200,

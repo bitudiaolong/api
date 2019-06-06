@@ -4990,13 +4990,13 @@ define({ "api": [
     "groupTitle": "03_HealthExamination"
   },
   {
-    "group": "03_UserInfo",
+    "group": "03_baseInfo",
     "type": "POST",
-    "url": "userBase",
-    "title": "01、用户基本信息",
-    "description": "<p>描述：包含于第三版个人基本信息表、以及签约相关信息</p>",
+    "url": "/open/userinfo/baseInfo",
+    "title": "01、新建档案",
+    "description": "<p>描述：该接口对应第三版个人基本信息表</p>",
     "version": "1.0.0",
-    "name": "userBase_01_______",
+    "name": "_open_userinfo_baseInfo_01_____",
     "parameter": {
       "fields": {
         "功能请求参数": [
@@ -5026,7 +5026,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "phone",
-            "description": "<p>本人电话)</p>"
+            "description": "<p>本人电话</p>"
           },
           {
             "group": "功能请求参数",
@@ -5300,39 +5300,6 @@ define({ "api": [
             "optional": false,
             "field": "signType",
             "description": "<p>签约状态 0待签约 1已签约 9已过期</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "执行成功示例\":",
-          "content": "{\n    \"errcode\": 200,\n    \"errmsg\":\"success\",\n    \"data\": {\n\n    }\n}",
-          "type": "JSON"
-        }
-      ]
-    },
-    "filename": "./postPublicHealthFollow.js",
-    "groupTitle": "03_UserInfo"
-  },
-  {
-    "group": "03_UserInfo",
-    "type": "POST",
-    "url": "userInfo",
-    "title": "02、用户信息",
-    "description": "<p>描述：包含于第三版个人基本信息表</p>",
-    "version": "1.0.0",
-    "name": "userInfo_02_____",
-    "parameter": {
-      "fields": {
-        "功能请求参数": [
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "identityCard",
-            "description": "<p>身份证</p>"
           },
           {
             "group": "功能请求参数",
@@ -5634,7 +5601,7 @@ define({ "api": [
       ]
     },
     "filename": "./postPublicHealthFollow.js",
-    "groupTitle": "03_UserInfo"
+    "groupTitle": "03_baseInfo"
   },
   {
     "group": "04_CoronaryDisease",
@@ -9223,6 +9190,34 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "./postPublicHealthFollow.js",
     "groupTitle": "11_ReferralTwoWay_______api__POST__referralTwoWay_02_____________apiVersion_1_0_0_______apiName_referralTwoWay_02__________________apiParam___________String__name__________apiParam___________String__identityCard_______________apiParam___________String__sex__________apiParam___________String__age__________apiParam___________String__number____________apiParam___________String__address____________apiParam___________String__phone____________apiParam___________String__referralDate__________________apiParam___________String__organizationName__________apiParam___________String__departments__________apiParam___________String__doctors____________apiParam___________String__doctorSignature______________apiParam___________String__date_______________apiSuccessExample__JSON________________________errcode___200________errmsg___success_________data__________________________",
+    "name": ""
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p>"
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./doc/main.js",
+    "group": "F__privateWork_api_postFollow_doc_main_js",
+    "groupTitle": "F__privateWork_api_postFollow_doc_main_js",
     "name": ""
   }
 ] });
