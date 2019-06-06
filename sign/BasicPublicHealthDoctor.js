@@ -570,6 +570,32 @@
  *  }
  */
 
+ 
+/**
+ * @apiGroup 02.Sign
+ * @api {POST} open/classPopulation/peopleTypeList 09、获取人群分类列表
+ * @apiVersion 1.0.0
+ * @apiName open/classPopulation/peopleTypeList
+ *
+ * @apiSuccess (data返回数据结果) {String} typeUid 人群分类id
+ * @apiSuccess (data返回数据结果) {String} typeName 人群分类名称
+ *
+ * @apiSuccessExample {JSON} 执行成功示例:
+ *  {
+ *      "errcode":200,
+ *      "errmsg":"",
+ *      "data":[
+ *         {
+ *              "typeUid":"",
+ *              "typeName":""
+ *         },
+ *         {
+ *              "typeUid":"",
+ *              "typeName":""
+ *         }
+ *      ]
+ *  }
+ */
 
 /**
  * @apiGroup 03.FollowPlan

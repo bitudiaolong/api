@@ -28,7 +28,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "01_Login"
   },
   {
@@ -149,7 +149,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "01_Login"
   },
   {
@@ -202,8 +202,45 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "01_Login"
+  },
+  {
+    "group": "02_Sign",
+    "type": "POST",
+    "url": "open/classPopulation/peopleTypeList",
+    "title": "09、获取人群分类列表",
+    "version": "1.0.0",
+    "name": "open_classPopulation_peopleTypeList",
+    "success": {
+      "fields": {
+        "data返回数据结果": [
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "typeUid",
+            "description": "<p>人群分类id</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "typeName",
+            "description": "<p>人群分类名称</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "执行成功示例:",
+          "content": "{\n    \"errcode\":200,\n    \"errmsg\":\"\",\n    \"data\":[\n       {\n            \"typeUid\":\"\",\n            \"typeName\":\"\"\n       },\n       {\n            \"typeUid\":\"\",\n            \"typeName\":\"\"\n       }\n    ]\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "filename": "./BasicPublicHealthDoctor.js",
+    "groupTitle": "02_Sign"
   },
   {
     "group": "02_Sign",
@@ -255,7 +292,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -377,7 +414,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -535,7 +572,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -897,7 +934,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -1005,7 +1042,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -1162,7 +1199,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -1418,7 +1455,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -1556,7 +1593,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "02_Sign"
   },
   {
@@ -1699,7 +1736,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "03_FollowPlan"
   },
   {
@@ -1768,7 +1805,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "03_FollowPlan"
   },
   {
@@ -1817,7 +1854,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "04_ChatCommunication"
   },
   {
@@ -1883,7 +1920,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "04_ChatCommunication"
   },
   {
@@ -1998,7 +2035,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "05_HealthRoom"
   },
   {
@@ -2074,7 +2111,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "05_HealthRoom"
   },
   {
@@ -2155,7 +2192,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "05_HealthRoom"
   },
   {
@@ -2221,7 +2258,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "06_Index"
   },
   {
@@ -2336,7 +2373,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "06_Index"
   },
   {
@@ -2407,7 +2444,7 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "06_Index"
   },
   {
@@ -2472,7 +2509,35 @@
         }
       ]
     },
-    "filename": "./BasicPublicHealthDoctor.java",
+    "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "Config"
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p>"
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./doc/main.js",
+    "group": "F__privateWork_api_sign_doc_main_js",
+    "groupTitle": "F__privateWork_api_sign_doc_main_js",
+    "name": ""
   }
 ]
