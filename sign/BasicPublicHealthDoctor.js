@@ -3,11 +3,11 @@
  *
  * @author 李宏鹏
  *
- * cityLcode 城市代码
- * deviceId 机顶盒号（APP没有MAC和CA卡号，只需deviceId即可）
- * deviceType 设备类型(android、iOS、html、TV）
- * clientTime 客户端时间，Unix时间戳
- * apkVersion apk版本号
+ * deviceId 设备型号
+ * deviceType 设备类型(android、iOS、html5）
+ * clientTime 时间戳
+ * version 版本号
+ * mac mac地址
  */
 
 
