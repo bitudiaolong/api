@@ -2513,6 +2513,16 @@ define({ "api": [
     "groupTitle": "Config"
   },
   {
+    "description": "<p>mac mac地址</p>",
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./BasicPublicHealthDoctor.js",
+    "group": "F__privateWork_api_sign_BasicPublicHealthDoctor_js",
+    "groupTitle": "F__privateWork_api_sign_BasicPublicHealthDoctor_js",
+    "name": ""
+  },
+  {
     "success": {
       "fields": {
         "Success 200": [

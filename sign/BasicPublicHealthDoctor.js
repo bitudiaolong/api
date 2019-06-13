@@ -3,11 +3,11 @@
  *
  * @author 李宏鹏
  *
- * deviceId 设备型号
- * deviceType 设备类型(android、iOS、html5）
- * clientTime 时间戳
- * version 版本号
- * mac mac地址
+ * @apiDescription deviceId 设备型号
+ * @apiDescription deviceType 设备类型(android、iOS、html5）
+ * @apiDescription clientTime 时间戳
+ * @apiDescription version 版本号
+ * @apiDescription mac mac地址
  */
 
 
