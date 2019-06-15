@@ -86,7 +86,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "md5",
-            "description": "<p>图片文件md5值，必填。需要des3加密</p>"
+            "description": "<p>图片文件md5值，选填。</p>"
           },
           {
             "group": "功能请求参数",

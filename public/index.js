@@ -46,7 +46,7 @@
  * @apiVersion 1.0.0
  * @apiName open/upload
  * @apiParam (功能请求参数) {File} file 图片文件，必填。不加密
- * @apiParam (功能请求参数) {String} md5 图片文件md5值，必填。需要des3加密
+ * @apiParam (功能请求参数) {String} md5 图片文件md5值，选填。
  * @apiParam (功能请求参数) {String} uid 医生的uid，必填。需要des3加密
  * @apiParam (功能请求参数) {String} type 图片类型，必填。0、用户头像；1、签约签名图片；2、签约医生用户合照；3、随访医生用户合照；4、心电图；99、其他图片
  * 
