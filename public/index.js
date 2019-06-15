@@ -41,7 +41,7 @@
 
 
 /**
- * @apiGroup 01.upload
+ * @apiGroup 02.upload
  * @api {POST} open/file/upload 01、上传图片（单张）
  * @apiVersion 1.0.0
  * @apiName open/upload

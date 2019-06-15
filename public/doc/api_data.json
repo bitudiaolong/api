@@ -65,7 +65,7 @@
     "groupTitle": "01_update"
   },
   {
-    "group": "01_upload",
+    "group": "02_upload",
     "type": "POST",
     "url": "open/file/upload",
     "title": "01、上传图片（单张）",
@@ -126,7 +126,7 @@
       ]
     },
     "filename": "./index.js",
-    "groupTitle": "01_upload"
+    "groupTitle": "02_upload"
   },
   {
     "success": {
