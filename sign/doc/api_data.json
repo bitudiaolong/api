@@ -36,7 +36,7 @@
     "type": "POST",
     "url": "open/sysaccount/login",
     "title": "01、登录",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "open_sysaccount_login",
     "description": "<p>doctorSignQRCode的data参数解密之后为json串：{&quot;mainDocId&quot;:&quot;8f9150d1fba84a2e80ebce6bcc0ee3c7&quot;}</p>",
     "parameter": {
@@ -115,22 +115,15 @@
             "group": "data返回数据结果",
             "type": "String",
             "optional": false,
-            "field": "healthRoomName",
-            "description": "<p>服务机构,签约卫生室</p>"
+            "field": "organizationId",
+            "description": "<p>所属服务机构id,签约卫生室id</p>"
           },
           {
             "group": "data返回数据结果",
             "type": "String",
             "optional": false,
-            "field": "teamMembers",
-            "description": "<p>医生团队成员名字</p>"
-          },
-          {
-            "group": "data返回数据结果",
-            "type": "String",
-            "optional": false,
-            "field": "docTeamName",
-            "description": "<p>医生团队名字</p>"
+            "field": "organizationName",
+            "description": "<p>所属服务机构,签约卫生室</p>"
           },
           {
             "group": "data返回数据结果",
@@ -144,7 +137,7 @@
       "examples": [
         {
           "title": "执行成功示例:",
-          "content": "{\n   \"errcode\":200,\n   \"errmsg\":\"\",\n   \"data\":{\n       \"doctorToken\":\"sjdhfakldhflkadsfhljkas==\",\n       \"userUid\":\"666\",\n       \"userPicture\":\"http://xxx/images/weather/day/00.png\",\n       \"userPhone\":\"18812345678\",\n       \"userName\":\"张三\",\n       \"userSex\":\"\",\n       \"userAddress\":\"\"\n       \"healthRoomName\":\"\"\n       \"teamMembers\":\"医生a,医生b,医生c\",\n       \"docTeamName\":\"超神团队\",\n       \"doctorSignQRCode\":\"http://xxx/xxx/startSign.html?data=u8nhasd98fhasd8f==\"\n   }\n}",
+          "content": "{\n   \"errcode\":200,\n   \"errmsg\":\"\",\n   \"data\":{\n       \"doctorToken\":\"sjdhfakldhflkadsfhljkas==\",\n       \"userUid\":\"666\",\n       \"userPicture\":\"http://xxx/images/weather/day/00.png\",\n       \"userPhone\":\"18812345678\",\n       \"userName\":\"张三\",\n       \"userSex\":\"\",\n       \"userAddress\":\"\",\n       \"organizationId\":\"\",\n       \"organizationName\":\"\",\n       \"doctorSignQRCode\":\"http://xxx/xxx/startSign.html?data=u8nhasd98fhasd8f==\"\n   }\n}",
           "type": "JSON"
         }
       ]
@@ -1273,7 +1266,7 @@
             "type": "String",
             "optional": false,
             "field": "householderIDCard",
-            "description": "<p>户主身份证</p>"
+            "description": "<p>户主身份证号，（签约类型：个人，户主身份证号传空）</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
@@ -2518,8 +2511,8 @@
     "url": "",
     "version": "0.0.0",
     "filename": "./BasicPublicHealthDoctor.js",
-    "group": "F__privateWork_api_sign_BasicPublicHealthDoctor_js",
-    "groupTitle": "F__privateWork_api_sign_BasicPublicHealthDoctor_js",
+    "group": "E__workspace_api_sign_BasicPublicHealthDoctor_js",
+    "groupTitle": "E__workspace_api_sign_BasicPublicHealthDoctor_js",
     "name": ""
   },
   {
@@ -2546,8 +2539,266 @@
     "url": "",
     "version": "0.0.0",
     "filename": "./doc/main.js",
-    "group": "F__privateWork_api_sign_doc_main_js",
-    "groupTitle": "F__privateWork_api_sign_doc_main_js",
+    "group": "E__workspace_api_sign_doc_main_js",
+    "groupTitle": "E__workspace_api_sign_doc_main_js",
     "name": ""
+  },
+  {
+    "group": "Login",
+    "type": "POST",
+    "url": "open/sysaccount/login",
+    "title": "01、登录",
+    "version": "1.0.0",
+    "name": "open_sysaccount_login",
+    "parameter": {
+      "fields": {
+        "功能请求参数": [
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "account",
+            "description": "<p>医生账号</p>"
+          },
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>医生密码</p>"
+          }
+        ],
+        "data返回数据结果": [
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "doctorToken",
+            "description": "<p>医生有效性校验标识</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "userUid",
+            "description": "<p>医生Uid,医生标识</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "userPicture",
+            "description": "<p>医生头像地址</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "userPhone",
+            "description": "<p>医生手机号</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "userName",
+            "description": "<p>医生名字</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "userSex",
+            "description": "<p>医生性别</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "userAddress",
+            "description": "<p>医生地址</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "healthRoomName",
+            "description": "<p>服务机构,签约卫生室</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "teamMembers",
+            "description": "<p>医生团队成员名字</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "docTeamName",
+            "description": "<p>医生团队名字</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "执行成功示例:",
+          "content": "{\n   \"errcode\":200,\n   \"errmsg\":\"\",\n   \"data\":{\n       \"doctorToken\":\"\",\n       \"userUid\":\"\",\n       \"userPicture\":\"\",\n       \"userPhone\":\"\",\n       \"userName\":\"\",\n       \"userSex\":\"男\",\n       \"userAddress\":\"\",\n       \"healthRoomName\":\"\",\n       \"teamMembers\":\"医生a,医生b,医生c\",\n       \"docTeamName\":\"xxx团队\"\n   }\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "filename": "./BasicPublicHealthDoctor.js",
+    "groupTitle": "Login"
+  },
+  {
+    "group": "Sign",
+    "type": "POST",
+    "url": "open/organization/organizationList",
+    "title": "10、获取签约卫生室(机构/卫生院)列表",
+    "version": "1.0.0",
+    "name": "open_organization_organizationList",
+    "parameter": {
+      "fields": {
+        "data返回数据结果": [
+          {
+            "group": "data返回数据结果",
+            "type": "Array",
+            "optional": false,
+            "field": "list",
+            "description": "<p>卫生室(机构/卫生院)列表</p>"
+          }
+        ],
+        "list列表内元素对象属性": [
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>机构id</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>机构名称</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>机构地址</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "imageUrl",
+            "description": "<p>机构图片</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "执行成功示例:",
+          "content": "{\n    \"errcode\":200,\n    \"errmsg\":\"\",\n    \"data\":{\n        \"list\":[{\n            \"id\":\"\",\n            \"name\":\"\",\n            \"address\":\"\",\n            \"imageUrl\":\"\"\n        },{\n            \"id\":\"\",\n            \"name\":\"\",\n            \"address\":\"\",\n            \"imageUrl\":\"\"\n        }]\n    }\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "filename": "./BasicPublicHealthDoctor.js",
+    "groupTitle": "Sign"
+  },
+  {
+    "group": "Sign",
+    "type": "POST",
+    "url": "open/team/docTeamList",
+    "title": "11、医生团队列表",
+    "version": "1.0.0",
+    "name": "open_team_docTeamList",
+    "parameter": {
+      "fields": {
+        "功能请求参数": [
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "organizationId",
+            "description": "<p>机构id</p>"
+          }
+        ],
+        "data返回数据结果": [
+          {
+            "group": "data返回数据结果",
+            "type": "Array",
+            "optional": false,
+            "field": "list",
+            "description": "<p>医生团队列表</p>"
+          }
+        ],
+        "list列表内元素对象属性": [
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>医生团队id</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "docTeamName",
+            "description": "<p>医生团队名称</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "mainDocName",
+            "description": "<p>主治医生名字</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "mainDocTel",
+            "description": "<p>主治医生联系电话</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "signCount",
+            "description": "<p>已签约人数</p>"
+          },
+          {
+            "group": "list列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "teamMembers",
+            "description": "<p>医生团队成员名字。逗号分隔字符串</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "执行成功示例:",
+          "content": "{\n     \"errcode\":200,\n     \"errmsg\":\"\",\n     \"data\":{\n         \"docTeamList\":[{\n             \"id\":\"\",\n             \"docTeamName\":\"\",\n             \"mainDocName\":\"\",\n             \"mainDocTel\":\"\",\n             \"signCount\":\"\",\n             \"teamMembers\":\"\"\n         },{\n             \"id\":\"\",\n             \"docTeamName\":\"\",\n             \"mainDocName\":\"\",\n             \"mainDocTel\":\"\",\n             \"signCount\":\"\",\n             \"teamMembers\":\"\"\n         }]\n     }\n }",
+          "type": "JSON"
+        }
+      ]
+    },
+    "filename": "./BasicPublicHealthDoctor.js",
+    "groupTitle": "Sign"
   }
 ]

@@ -10,11 +10,10 @@
  * @apiDescription mac mac地址
  */
 
-
 /**
  * @apiGroup 01.Login
  * @api {POST} open/sysaccount/login 01、登录
- * @apiVersion 1.0.0
+ * @apiVersion 1.0.1
  * @apiName open/sysaccount/login
  * @apiDescription doctorSignQRCode的data参数解密之后为json串：{"mainDocId":"8f9150d1fba84a2e80ebce6bcc0ee3c7"}
  *
@@ -28,9 +27,8 @@
  * @apiSuccess (data返回数据结果) {String} userName 医生名字
  * @apiSuccess (data返回数据结果) {String} userSex 医生性别
  * @apiSuccess (data返回数据结果) {String} userAddress 医生地址
- * @apiSuccess (data返回数据结果) {String} healthRoomName 服务机构,签约卫生室
- * @apiSuccess (data返回数据结果) {String} teamMembers 医生团队成员名字
- * @apiSuccess (data返回数据结果) {String} docTeamName 医生团队名字
+ * @apiSuccess (data返回数据结果) {String} organizationId 所属服务机构id,签约卫生室id
+ * @apiSuccess (data返回数据结果) {String} organizationName 所属服务机构,签约卫生室
  * @apiSuccess (data返回数据结果) {String} doctorSignQRCode 医生签约码字符串（所有参数用加密之后用data作为参数名）
  *
  * @apiSuccessExample {JSON} 执行成功示例:
@@ -44,11 +42,50 @@
  *        "userPhone":"18812345678",
  *        "userName":"张三",
  *        "userSex":"",
- *        "userAddress":""
- *        "healthRoomName":""
- *        "teamMembers":"医生a,医生b,医生c",
- *        "docTeamName":"超神团队",
+ *        "userAddress":"",
+ *        "organizationId":"",
+ *        "organizationName":"",
  *        "doctorSignQRCode":"http://xxx/xxx/startSign.html?data=u8nhasd98fhasd8f=="
+ *    }
+ * }
+ */
+
+
+/**
+ * @apiGroup Login
+ * @api {POST} open/sysaccount/login 01、登录
+ * @apiVersion 1.0.0
+ * @apiName open/sysaccount/login
+ *
+ * @apiParam (功能请求参数) {String} account 医生账号
+ * @apiParam (功能请求参数) {String} password 医生密码
+ *
+ * @apiParam (data返回数据结果) {String} doctorToken 医生有效性校验标识
+ * @apiParam (data返回数据结果) {String} userUid 医生Uid,医生标识
+ * @apiParam (data返回数据结果) {String} userPicture 医生头像地址
+ * @apiParam (data返回数据结果) {String} userPhone 医生手机号
+ * @apiParam (data返回数据结果) {String} userName 医生名字
+ * @apiParam (data返回数据结果) {String} userSex 医生性别
+ * @apiParam (data返回数据结果) {String} userAddress 医生地址
+ * @apiParam (data返回数据结果) {String} healthRoomName 服务机构,签约卫生室
+ * @apiParam (data返回数据结果) {String} teamMembers 医生团队成员名字
+ * @apiParam (data返回数据结果) {String} docTeamName 医生团队名字
+ *
+ * @apiSuccessExample {JSON} 执行成功示例:
+ * {
+ *    "errcode":200,
+ *    "errmsg":"",
+ *    "data":{
+ *        "doctorToken":"",
+ *        "userUid":"",
+ *        "userPicture":"",
+ *        "userPhone":"",
+ *        "userName":"",
+ *        "userSex":"男",
+ *        "userAddress":"",
+ *        "healthRoomName":"",
+ *        "teamMembers":"医生a,医生b,医生c",
+ *        "docTeamName":"xxx团队"
  *    }
  * }
  */
@@ -594,6 +631,81 @@
  *              "typeName":""
  *         }
  *      ]
+ *  }
+ */
+
+
+/**
+ * @apiGroup Sign
+ * @api {POST} open/organization/organizationList  10、获取签约卫生室(机构/卫生院)列表
+ * @apiVersion 1.0.0
+ * @apiName open/organization/organizationList
+ *
+ * @apiParam (data返回数据结果) {Array} list 卫生室(机构/卫生院)列表
+ *
+ * @apiParam (list列表内元素对象属性) {String} id 机构id
+ * @apiParam (list列表内元素对象属性) {String} name 机构名称
+ * @apiParam (list列表内元素对象属性) {String} address 机构地址
+ * @apiParam (list列表内元素对象属性) {String} imageUrl 机构图片
+ *
+ * @apiSuccessExample {JSON} 执行成功示例:
+ *  {
+ *      "errcode":200,
+ *      "errmsg":"",
+ *      "data":{
+ *          "list":[{
+ *              "id":"",
+ *              "name":"",
+ *              "address":"",
+ *              "imageUrl":""
+ *          },{
+ *              "id":"",
+ *              "name":"",
+ *              "address":"",
+ *              "imageUrl":""
+ *          }]
+ *      }
+ *  }
+ */
+
+/**
+ * @apiGroup Sign
+ * @api {POST} open/team/docTeamList  11、医生团队列表
+ * @apiVersion 1.0.0
+ * @apiName open/team/docTeamList
+ *
+ * @apiParam (功能请求参数) {String} organizationId 机构id
+ *
+ * @apiParam (data返回数据结果) {Array} list 医生团队列表
+ *
+ * @apiParam (list列表内元素对象属性) {String} id 医生团队id
+ * @apiParam (list列表内元素对象属性) {String} docTeamName 医生团队名称
+ * @apiParam (list列表内元素对象属性) {String} mainDocName 主治医生名字
+ * @apiParam (list列表内元素对象属性) {String} mainDocTel 主治医生联系电话
+ * @apiParam (list列表内元素对象属性) {String} signCount 已签约人数
+ * @apiParam (list列表内元素对象属性) {String} teamMembers 医生团队成员名字。逗号分隔字符串
+ *
+ * @apiSuccessExample {JSON} 执行成功示例:
+ * {
+ *      "errcode":200,
+ *      "errmsg":"",
+ *      "data":{
+ *          "docTeamList":[{
+ *              "id":"",
+ *              "docTeamName":"",
+ *              "mainDocName":"",
+ *              "mainDocTel":"",
+ *              "signCount":"",
+ *              "teamMembers":""
+ *          },{
+ *              "id":"",
+ *              "docTeamName":"",
+ *              "mainDocName":"",
+ *              "mainDocTel":"",
+ *              "signCount":"",
+ *              "teamMembers":""
+ *          }]
+ *      }
  *  }
  */
 
