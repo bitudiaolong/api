@@ -406,7 +406,7 @@
  * @apiSuccess (submitSignList列表内元素对象属性) {String} userUid 医生Uid,医生标识
  * @apiSuccess (submitSignList列表内元素对象属性) {String} docTeamId 医生团队id
  * @apiSuccess (submitSignList列表内元素对象属性) {String} userName 签约用户姓名
- * @apiSuccess (submitSignList列表内元素对象属性) {String} householderIDCard 户主身份证
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} householderIDCard 户主身份证号，（签约类型：个人，户主身份证号传空）
  * @apiSuccess (submitSignList列表内元素对象属性) {String} identityCard 身份证号码
  * @apiSuccess (submitSignList列表内元素对象属性) {String} identityCardImage 身份证照片名
  * @apiSuccess (submitSignList列表内元素对象属性) {String} sex 用户性别（"","女"）
