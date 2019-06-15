@@ -65,6 +65,70 @@
     "groupTitle": "01_update"
   },
   {
+    "group": "01_upload",
+    "type": "POST",
+    "url": "open/file/upload",
+    "title": "01、上传图片（单张）",
+    "version": "1.0.0",
+    "name": "open_upload",
+    "parameter": {
+      "fields": {
+        "功能请求参数": [
+          {
+            "group": "功能请求参数",
+            "type": "File",
+            "optional": false,
+            "field": "file",
+            "description": "<p>图片文件，必填。不加密</p>"
+          },
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "md5",
+            "description": "<p>图片文件md5值，必填。需要des3加密</p>"
+          },
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "uid",
+            "description": "<p>医生的uid，必填。需要des3加密</p>"
+          },
+          {
+            "group": "功能请求参数",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>图片类型，必填。0、用户头像；1、签约签名图片；2、签约医生用户合照；3、随访医生用户合照；99、其他图片</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "data返回数据结果": [
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "fileName",
+            "description": ""
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "执行成功示例:",
+          "content": "{\n   \"errcode\":200,\n   \"errmsg\":\"\",\n   \"data\":{\n       \"fileName\":\"http://xxx.ccc.png\",\n   }\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "filename": "./index.js",
+    "groupTitle": "01_upload"
+  },
+  {
     "success": {
       "fields": {
         "Success 200": [
@@ -88,8 +152,8 @@
     "url": "",
     "version": "0.0.0",
     "filename": "./doc/main.js",
-    "group": "F__privateWork_api_public_doc_main_js",
-    "groupTitle": "F__privateWork_api_public_doc_main_js",
+    "group": "E__workspace_api_public_doc_main_js",
+    "groupTitle": "E__workspace_api_public_doc_main_js",
     "name": ""
   }
 ]
