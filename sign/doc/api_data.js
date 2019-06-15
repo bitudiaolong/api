@@ -129,6 +129,20 @@ define({ "api": [
             "group": "data返回数据结果",
             "type": "String",
             "optional": false,
+            "field": "teamMembers",
+            "description": "<p>医生团队成员名字</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
+            "field": "docTeamName",
+            "description": "<p>所属医生团队名字</p>"
+          },
+          {
+            "group": "data返回数据结果",
+            "type": "String",
+            "optional": false,
             "field": "doctorSignQRCode",
             "description": "<p>医生签约码字符串（所有参数用加密之后用data作为参数名）</p>"
           }
@@ -137,7 +151,7 @@ define({ "api": [
       "examples": [
         {
           "title": "执行成功示例:",
-          "content": "{\n   \"errcode\":200,\n   \"errmsg\":\"\",\n   \"data\":{\n       \"doctorToken\":\"sjdhfakldhflkadsfhljkas==\",\n       \"userUid\":\"666\",\n       \"userPicture\":\"http://xxx/images/weather/day/00.png\",\n       \"userPhone\":\"18812345678\",\n       \"userName\":\"张三\",\n       \"userSex\":\"\",\n       \"userAddress\":\"\",\n       \"organizationId\":\"\",\n       \"organizationName\":\"\",\n       \"doctorSignQRCode\":\"\"\n   }\n}",
+          "content": "{\n   \"errcode\":200,\n   \"errmsg\":\"\",\n   \"data\":{\n       \"doctorToken\":\"sjdhfakldhflkadsfhljkas==\",\n       \"userUid\":\"666\",\n       \"userPicture\":\"http://xxx/images/weather/day/00.png\",\n       \"userPhone\":\"18812345678\",\n       \"userName\":\"张三\",\n       \"userSex\":\"\",\n       \"userAddress\":\"\",\n       \"organizationId\":\"\",\n       \"organizationName\":\"\",\n       \"teamMembers\":\"\",\n       \"docTeamName\":\"\",\n       \"doctorSignQRCode\":\"\"\n   }\n}",
           "type": "JSON"
         }
       ]

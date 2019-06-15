@@ -72,6 +72,8 @@
  * @apiSuccess (data返回数据结果) {String} userAddress 医生地址
  * @apiSuccess (data返回数据结果) {String} organizationId 所属服务机构id
  * @apiSuccess (data返回数据结果) {String} organizationName 所属服务机构,签约卫生室
+ * @apiSuccess (data返回数据结果) {String} teamMembers 医生团队成员名字
+ * @apiSuccess (data返回数据结果) {String} docTeamName 所属医生团队名字
  * @apiSuccess (data返回数据结果) {String} doctorSignQRCode 医生签约码字符串（所有参数用加密之后用data作为参数名）
  *
  * @apiSuccessExample {JSON} 执行成功示例:
@@ -88,6 +90,8 @@
  *        "userAddress":"",
  *        "organizationId":"",
  *        "organizationName":"",
+ *        "teamMembers":"",
+ *        "docTeamName":"",
  *        "doctorSignQRCode":""
  *    }
  * }
