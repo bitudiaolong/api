@@ -19,7 +19,7 @@
  *
  * @apiSuccess (data返回数据结果) {String} version 版本号
  * @apiSuccess (data返回数据结果) {String} packageName 升级安装包名
- * @apiSuccess (data返回数据结果) {String} packSize 升级安装包大小(单位：kb)
+ * @apiSuccess (data返回数据结果) {String} packSize 升级安装包大小
  * @apiSuccess (data返回数据结果) {String} packageUrl apk升级地址，eg：http://.../download?id=...
  * @apiSuccess (data返回数据结果) {String} isForceUpdate 是否强制更新 1是、0否
  * @apiSuccess (data返回数据结果) {String} description 更新内容描述
@@ -59,5 +59,20 @@
  *    "data":{
  *        "fileName":"http://xxx.ccc.png",
  *    }
+ * }
+ */
+
+/**
+ * @apiGroup 02.upload
+ * @api {GET} open/file/downloadFile 02、文件/图片下载
+ * @apiVersion 1.0.0
+ * @apiName open/file/downloadFile
+ * @apiParam (功能请求参数) {String} fileName 文件名，必填。
+ * @apiParam (功能请求参数) {String} type 文件名，必填。//0:回显图片  1：下载文件和图片
+ * @apiSuccessExample {JSON} 执行成功示例:
+ * {
+ *    "errcode":200,
+ *    "errmsg":"",
+ *    "data":{}
  * }
  */
