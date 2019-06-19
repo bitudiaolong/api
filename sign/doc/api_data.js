@@ -341,10 +341,28 @@ define({ "api": [
     "groupTitle": "01_Login"
   },
   {
+    "group": "02_Sign_______api__POST__open_doctor_confirmReject_06____________apiVersion_1_0_0_______apiName_open_doctor_confirmReject____________apiParam___________String__doctorToken_________________apiParam___________String__userUid___Uid____________apiParam___________String__signUid______id_______apiParam___________String__rejectReason_________________apiSuccessExample__JSON_______________________errcode__200________errmsg____________data____________________",
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./BasicPublicHealthDoctor.js",
+    "groupTitle": "02_Sign_______api__POST__open_doctor_confirmReject_06____________apiVersion_1_0_0_______apiName_open_doctor_confirmReject____________apiParam___________String__doctorToken_________________apiParam___________String__userUid___Uid____________apiParam___________String__signUid______id_______apiParam___________String__rejectReason_________________apiSuccessExample__JSON_______________________errcode__200________errmsg____________data____________________",
+    "name": ""
+  },
+  {
+    "group": "02_Sign_______api__POST__open_doctor_confirmSubmit_07__________________apiVersion_1_0_0_______apiName_open_doctor_confirmSubmit____________apiParam___________String__doctorToken_________________apiParam___________String__userUid___Uid____________apiParam___________String__signUid______id_______apiParam___________String__remarks_____________apiParam___________String__classificationList__________________apiParam___________String__signTime______2017_12_31_2018_12_31________apiParam___________Array__servicePackageList________________apiSuccess__servicePackageList____________String__servicePackageId____id_______apiSuccess__servicePackageList____________String__servicePackageName____________apiSuccess__servicePackageList____________String__expiryDate________2017_12_31_2018_12_31________apiSuccess__servicePackageList____________Array__serviceContent__________________apiSuccess__serviceContent____________String__serviceItemId____id_______apiSuccess__serviceContent____________String__serviceItem__________________apiSuccessExample__JSON_______________________errcode__200________errmsg____________data____________________",
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./BasicPublicHealthDoctor.js",
+    "groupTitle": "02_Sign_______api__POST__open_doctor_confirmSubmit_07__________________apiVersion_1_0_0_______apiName_open_doctor_confirmSubmit____________apiParam___________String__doctorToken_________________apiParam___________String__userUid___Uid____________apiParam___________String__signUid______id_______apiParam___________String__remarks_____________apiParam___________String__classificationList__________________apiParam___________String__signTime______2017_12_31_2018_12_31________apiParam___________Array__servicePackageList________________apiSuccess__servicePackageList____________String__servicePackageId____id_______apiSuccess__servicePackageList____________String__servicePackageName____________apiSuccess__servicePackageList____________String__expiryDate________2017_12_31_2018_12_31________apiSuccess__servicePackageList____________Array__serviceContent__________________apiSuccess__serviceContent____________String__serviceItemId____id_______apiSuccess__serviceContent____________String__serviceItem__________________apiSuccessExample__JSON_______________________errcode__200________errmsg____________data____________________",
+    "name": ""
+  },
+  {
     "group": "02_Sign",
     "type": "POST",
     "url": "open/classPopulation/peopleTypeList",
-    "title": "09、获取人群分类列表",
+    "title": "07、获取人群分类列表",
     "version": "1.0.0",
     "name": "open_classPopulation_peopleTypeList",
     "success": {
@@ -370,181 +388,6 @@ define({ "api": [
         {
           "title": "执行成功示例:",
           "content": "{\n    \"errcode\":200,\n    \"errmsg\":\"\",\n    \"data\":[\n       {\n            \"typeUid\":\"\",\n            \"typeName\":\"\"\n       },\n       {\n            \"typeUid\":\"\",\n            \"typeName\":\"\"\n       }\n    ]\n}",
-          "type": "JSON"
-        }
-      ]
-    },
-    "filename": "./BasicPublicHealthDoctor.js",
-    "groupTitle": "02_Sign"
-  },
-  {
-    "group": "02_Sign",
-    "type": "POST",
-    "url": "open/doctor/confirmReject",
-    "title": "06、确认驳回",
-    "version": "1.0.0",
-    "name": "open_doctor_confirmReject",
-    "parameter": {
-      "fields": {
-        "功能请求参数": [
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "doctorToken",
-            "description": "<p>医生有效性校验标识</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "userUid",
-            "description": "<p>医生Uid,医生标识</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "signUid",
-            "description": "<p>签约记录号id</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "rejectReason",
-            "description": "<p>驳回原因</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "执行成功示例:",
-          "content": "{\n     \"errcode\":200,\n     \"errmsg\":\"\",\n     \"data\":{\n     }\n }",
-          "type": "JSON"
-        }
-      ]
-    },
-    "filename": "./BasicPublicHealthDoctor.js",
-    "groupTitle": "02_Sign"
-  },
-  {
-    "group": "02_Sign",
-    "type": "POST",
-    "url": "open/doctor/confirmSubmit",
-    "title": "07、确认提交（审核通过）",
-    "version": "1.0.0",
-    "name": "open_doctor_confirmSubmit",
-    "parameter": {
-      "fields": {
-        "功能请求参数": [
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "doctorToken",
-            "description": "<p>医生有效性校验标识</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "userUid",
-            "description": "<p>医生Uid,医生标识</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "signUid",
-            "description": "<p>签约记录号id</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "remarks",
-            "description": "<p>备注，选填</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "classificationList",
-            "description": "<p>人群分类（逗号分隔）</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "signTime",
-            "description": "<p>签约时间（2017-12-31~2018-12-31）</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "Array",
-            "optional": false,
-            "field": "servicePackageList",
-            "description": "<p>服务包</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "servicePackageList列表内元素对象属性": [
-          {
-            "group": "servicePackageList列表内元素对象属性",
-            "type": "String",
-            "optional": false,
-            "field": "servicePackageId",
-            "description": "<p>服务包id</p>"
-          },
-          {
-            "group": "servicePackageList列表内元素对象属性",
-            "type": "String",
-            "optional": false,
-            "field": "servicePackageName",
-            "description": "<p>服务包名</p>"
-          },
-          {
-            "group": "servicePackageList列表内元素对象属性",
-            "type": "String",
-            "optional": false,
-            "field": "expiryDate",
-            "description": "<p>服务有效期 （2017-12-31~2018-12-31）</p>"
-          },
-          {
-            "group": "servicePackageList列表内元素对象属性",
-            "type": "Array",
-            "optional": false,
-            "field": "serviceContent",
-            "description": "<p>服务包内容</p>"
-          }
-        ],
-        "serviceContent列表内元素对象属性": [
-          {
-            "group": "serviceContent列表内元素对象属性",
-            "type": "String",
-            "optional": false,
-            "field": "serviceItemId",
-            "description": "<p>服务项id</p>"
-          },
-          {
-            "group": "serviceContent列表内元素对象属性",
-            "type": "String",
-            "optional": false,
-            "field": "serviceItem",
-            "description": "<p>服务项目名</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "执行成功示例:",
-          "content": "{\n     \"errcode\":200,\n     \"errmsg\":\"\",\n     \"data\":{\n     }\n }",
           "type": "JSON"
         }
       ]
@@ -1353,28 +1196,28 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "doctorToken",
-            "description": "<p>用户有效性校验标识</p>"
+            "description": "<p>用户有效性校验标识，必填</p>"
           },
           {
             "group": "功能请求参数",
             "type": "String",
             "optional": false,
             "field": "userUid",
-            "description": "<p>医生Uid,医生标识</p>"
+            "description": "<p>医生Uid,医生标识，必填</p>"
           },
           {
             "group": "功能请求参数",
             "type": "String",
             "optional": false,
             "field": "signType",
-            "description": "<p>签约类型：1个人 2家庭</p>"
+            "description": "<p>签约类型：1个人 2家庭，必填</p>"
           },
           {
             "group": "功能请求参数",
             "type": "Array",
             "optional": false,
             "field": "submitSignList",
-            "description": "<p>签约用户的列表</p>"
+            "description": "<p>签约用户的列表，必填</p>"
           }
         ]
       }
@@ -1387,147 +1230,147 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "userUid",
-            "description": "<p>医生Uid,医生标识</p>"
+            "description": "<p>医生Uid,医生标识，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "docTeamId",
-            "description": "<p>医生团队id</p>"
+            "description": "<p>医生团队id，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "userName",
-            "description": "<p>签约用户姓名</p>"
+            "description": "<p>签约用户姓名，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "householderIDCard",
-            "description": "<p>户主身份证号，（签约类型：个人，户主身份证号传空）</p>"
+            "description": "<p>户主身份证号，选填。不填，字段值传空（签约类型：个人，户主身份证号传空）</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "identityCard",
-            "description": "<p>身份证号码</p>"
+            "description": "<p>身份证号码，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "identityCardImage",
-            "description": "<p>身份证照片名</p>"
+            "description": "<p>身份证照片名，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "sex",
-            "description": "<p>用户性别（&quot;&quot;,&quot;女&quot;）</p>"
+            "description": "<p>用户性别（&quot;&quot;,&quot;女&quot;），必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "raceName",
-            "description": "<p>民族</p>"
+            "description": "<p>民族，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "birthday",
-            "description": "<p>出生日期(yyyy-MM-dd)</p>"
+            "description": "<p>出生日期(yyyy-MM-dd)，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "age",
-            "description": "<p>年龄</p>"
+            "description": "<p>年龄，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "userPhone",
-            "description": "<p>联系电话</p>"
+            "description": "<p>联系电话，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "userAddress",
-            "description": "<p>现住址</p>"
+            "description": "<p>现住址，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "relationship",
-            "description": "<p>与户主关系</p>"
+            "description": "<p>与户主关系，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "pictureOneName",
-            "description": "<p>拍照图片名字1</p>"
+            "description": "<p>拍照图片名字1，选填。不填，字段值传空</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "pictureTwoName",
-            "description": "<p>拍照图片名字2</p>"
+            "description": "<p>拍照图片名字2，选填。不填，字段值传空</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "pictureSignName",
-            "description": "<p>用户签名图片名字</p>"
+            "description": "<p>用户签名图片名字，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "Array",
             "optional": false,
             "field": "classificationList",
-            "description": "<p>人群分类</p>"
+            "description": "<p>人群分类，必填。例如：['一般人群','老年人','五保户']</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "Array",
             "optional": false,
             "field": "servicePackageList",
-            "description": "<p>服务包</p>"
+            "description": "<p>服务包，必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "Long",
             "optional": false,
             "field": "serviceTotalPrice",
-            "description": "<p>服务总价(单位：分）</p>"
+            "description": "<p>服务总价(单位：分），必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "remarks",
-            "description": "<p>备注说明</p>"
+            "description": "<p>备注说明，选填。不填，字段值传空</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "signTime",
-            "description": "<p>签约时间（2017-12-31~2018-12-31）</p>"
+            "description": "<p>签约时间，必填（2017-12-31~2018-12-31）</p>"
           }
         ],
         "servicePackageList列表内元素对象属性": [
@@ -1536,28 +1379,28 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "servicePackageId",
-            "description": "<p>服务包id</p>"
+            "description": "<p>服务包id，必填</p>"
           },
           {
             "group": "servicePackageList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "servicePackageName",
-            "description": "<p>服务包名</p>"
+            "description": "<p>服务包名，必填</p>"
           },
           {
             "group": "servicePackageList列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "expiryDate",
-            "description": "<p>服务有效期 （2017-12-31~2018-12-31）</p>"
+            "description": "<p>服务有效期 ，必填（2017-12-31~2018-12-31）</p>"
           },
           {
             "group": "servicePackageList列表内元素对象属性",
             "type": "Array",
             "optional": false,
             "field": "serviceContent",
-            "description": "<p>服务包内容</p>"
+            "description": "<p>服务包内容，必填</p>"
           }
         ],
         "serviceContent列表内元素对象属性": [
@@ -1566,14 +1409,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "serviceItemId",
-            "description": "<p>服务项id</p>"
+            "description": "<p>服务项id，必填</p>"
           },
           {
             "group": "serviceContent列表内元素对象属性",
             "type": "String",
             "optional": false,
             "field": "serviceItem",
-            "description": "<p>服务项目名</p>"
+            "description": "<p>服务项目名，必填</p>"
           }
         ]
       },
@@ -1597,7 +1440,7 @@ define({ "api": [
     "group": "02_Sign",
     "type": "POST",
     "url": "open/server/getServicePackageList",
-    "title": "08、获得服务包",
+    "title": "06、获得服务包",
     "version": "1.0.0",
     "name": "open_server_getServicePackageList",
     "parameter": {
@@ -1735,7 +1578,7 @@ define({ "api": [
     "group": "02_Sign",
     "type": "POST",
     "url": "open/team/docTeamList",
-    "title": "10、医生团队列表",
+    "title": "08、医生团队列表",
     "version": "1.0.0",
     "name": "open_team_docTeamList",
     "parameter": {

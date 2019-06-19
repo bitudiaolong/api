@@ -444,40 +444,40 @@
  * @apiName open/doctor/submitSign
  * @apiDescription 只要有一个已经签约,就报错,返回已经签约人的名字。   入参是Array的，用json格式的字符串。
  *
- * @apiParam (功能请求参数) {String} doctorToken 用户有效性校验标识
- * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识
- * @apiParam (功能请求参数) {String} signType 签约类型：1个人 2家庭
- * @apiParam (功能请求参数) {Array} submitSignList 签约用户的列表
+ * @apiParam (功能请求参数) {String} doctorToken 用户有效性校验标识，必填
+ * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识，必填
+ * @apiParam (功能请求参数) {String} signType 签约类型：1个人 2家庭，必填
+ * @apiParam (功能请求参数) {Array} submitSignList 签约用户的列表，必填
  *
- * @apiSuccess (submitSignList列表内元素对象属性) {String} userUid 医生Uid,医生标识
- * @apiSuccess (submitSignList列表内元素对象属性) {String} docTeamId 医生团队id
- * @apiSuccess (submitSignList列表内元素对象属性) {String} userName 签约用户姓名
- * @apiSuccess (submitSignList列表内元素对象属性) {String} householderIDCard 户主身份证号，（签约类型：个人，户主身份证号传空）
- * @apiSuccess (submitSignList列表内元素对象属性) {String} identityCard 身份证号码
- * @apiSuccess (submitSignList列表内元素对象属性) {String} identityCardImage 身份证照片名
- * @apiSuccess (submitSignList列表内元素对象属性) {String} sex 用户性别（"","女"）
- * @apiSuccess (submitSignList列表内元素对象属性) {String} raceName 民族
- * @apiSuccess (submitSignList列表内元素对象属性) {String} birthday 出生日期(yyyy-MM-dd)
- * @apiSuccess (submitSignList列表内元素对象属性) {String} age 年龄
- * @apiSuccess (submitSignList列表内元素对象属性) {String} userPhone 联系电话
- * @apiSuccess (submitSignList列表内元素对象属性) {String} userAddress 现住址
- * @apiSuccess (submitSignList列表内元素对象属性) {String} relationship 与户主关系
- * @apiSuccess (submitSignList列表内元素对象属性) {String} pictureOneName 拍照图片名字1
- * @apiSuccess (submitSignList列表内元素对象属性) {String} pictureTwoName 拍照图片名字2
- * @apiSuccess (submitSignList列表内元素对象属性) {String} pictureSignName 用户签名图片名字
- * @apiSuccess (submitSignList列表内元素对象属性) {Array} classificationList 人群分类
- * @apiSuccess (submitSignList列表内元素对象属性) {Array} servicePackageList 服务包
- * @apiSuccess (submitSignList列表内元素对象属性) {Long} serviceTotalPrice 服务总价(单位：分）
- * @apiSuccess (submitSignList列表内元素对象属性) {String} remarks 备注说明
- * @apiSuccess (submitSignList列表内元素对象属性) {String} signTime 签约时间（2017-12-31~2018-12-31）
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} userUid 医生Uid,医生标识，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} docTeamId 医生团队id，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} userName 签约用户姓名，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} householderIDCard 户主身份证号，选填。不填，字段值传空（签约类型：个人，户主身份证号传空）
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} identityCard 身份证号码，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} identityCardImage 身份证照片名，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} sex 用户性别（"","女"），必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} raceName 民族，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} birthday 出生日期(yyyy-MM-dd)，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} age 年龄，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} userPhone 联系电话，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} userAddress 现住址，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} relationship 与户主关系，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} pictureOneName 拍照图片名字1，选填。不填，字段值传空
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} pictureTwoName 拍照图片名字2，选填。不填，字段值传空
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} pictureSignName 用户签名图片名字，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {Array} classificationList 人群分类，必填。例如：['一般人群','老年人','五保户']
+ * @apiSuccess (submitSignList列表内元素对象属性) {Array} servicePackageList 服务包，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {Long} serviceTotalPrice 服务总价(单位：分），必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} remarks 备注说明，选填。不填，字段值传空
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} signTime 签约时间，必填（2017-12-31~2018-12-31）
  *
- * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageId 服务包id
- * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageName 服务包名
- * @apiSuccess (servicePackageList列表内元素对象属性) {String} expiryDate 服务有效期 （2017-12-31~2018-12-31）
- * @apiSuccess (servicePackageList列表内元素对象属性) {Array} serviceContent 服务包内容
+ * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageId 服务包id，必填
+ * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageName 服务包名，必填
+ * @apiSuccess (servicePackageList列表内元素对象属性) {String} expiryDate 服务有效期 ，必填（2017-12-31~2018-12-31）
+ * @apiSuccess (servicePackageList列表内元素对象属性) {Array} serviceContent 服务包内容，必填
  *
- * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItemId 服务项id
- * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItem 服务项目名
+ * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItemId 服务项id，必填
+ * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItem 服务项目名，必填
  *
  * @apiSuccessExample {JSON} 执行成功示例:
  * {
@@ -495,61 +495,61 @@
  *      }
  *  }
  */
+//
+///**
+// * @apiGroup 02.Sign
+// * @api {POST} open/doctor/confirmReject 06、确认驳回
+// * @apiVersion 1.0.0
+// * @apiName open/doctor/confirmReject
+// *
+// * @apiParam (功能请求参数) {String} doctorToken 医生有效性校验标识
+// * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识
+// * @apiParam (功能请求参数) {String} signUid 签约记录号id
+// * @apiParam (功能请求参数) {String} rejectReason 驳回原因
+// *
+// * @apiSuccessExample {JSON} 执行成功示例:
+// * {
+// *      "errcode":200,
+// *      "errmsg":"",
+// *      "data":{
+// *      }
+// *  }
+// */
+//
+///**
+// * @apiGroup 02.Sign
+// * @api {POST} open/doctor/confirmSubmit 07、确认提交（审核通过）
+// * @apiVersion 1.0.0
+// * @apiName open/doctor/confirmSubmit
+// *
+// * @apiParam (功能请求参数) {String} doctorToken 医生有效性校验标识
+// * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识
+// * @apiParam (功能请求参数) {String} signUid 签约记录号id
+// * @apiParam (功能请求参数) {String} remarks 备注，选填
+// * @apiParam (功能请求参数) {String} classificationList 人群分类（逗号分隔）
+// * @apiParam (功能请求参数) {String} signTime 签约时间（2017-12-31~2018-12-31）
+// * @apiParam (功能请求参数) {Array} servicePackageList 服务包
+// *
+// * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageId 服务包id
+// * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageName 服务包名
+// * @apiSuccess (servicePackageList列表内元素对象属性) {String} expiryDate 服务有效期 （2017-12-31~2018-12-31）
+// * @apiSuccess (servicePackageList列表内元素对象属性) {Array} serviceContent 服务包内容
+// *
+// * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItemId 服务项id
+// * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItem 服务项目名
+// *
+// * @apiSuccessExample {JSON} 执行成功示例:
+// * {
+// *      "errcode":200,
+// *      "errmsg":"",
+// *      "data":{
+// *      }
+// *  }
+// */
 
 /**
  * @apiGroup 02.Sign
- * @api {POST} open/doctor/confirmReject 06、确认驳回
- * @apiVersion 1.0.0
- * @apiName open/doctor/confirmReject
- *
- * @apiParam (功能请求参数) {String} doctorToken 医生有效性校验标识
- * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识
- * @apiParam (功能请求参数) {String} signUid 签约记录号id
- * @apiParam (功能请求参数) {String} rejectReason 驳回原因
- *
- * @apiSuccessExample {JSON} 执行成功示例:
- * {
- *      "errcode":200,
- *      "errmsg":"",
- *      "data":{
- *      }
- *  }
- */
-
-/**
- * @apiGroup 02.Sign
- * @api {POST} open/doctor/confirmSubmit 07、确认提交（审核通过）
- * @apiVersion 1.0.0
- * @apiName open/doctor/confirmSubmit
- *
- * @apiParam (功能请求参数) {String} doctorToken 医生有效性校验标识
- * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识
- * @apiParam (功能请求参数) {String} signUid 签约记录号id
- * @apiParam (功能请求参数) {String} remarks 备注，选填
- * @apiParam (功能请求参数) {String} classificationList 人群分类（逗号分隔）
- * @apiParam (功能请求参数) {String} signTime 签约时间（2017-12-31~2018-12-31）
- * @apiParam (功能请求参数) {Array} servicePackageList 服务包
- *
- * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageId 服务包id
- * @apiSuccess (servicePackageList列表内元素对象属性) {String} servicePackageName 服务包名
- * @apiSuccess (servicePackageList列表内元素对象属性) {String} expiryDate 服务有效期 （2017-12-31~2018-12-31）
- * @apiSuccess (servicePackageList列表内元素对象属性) {Array} serviceContent 服务包内容
- *
- * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItemId 服务项id
- * @apiSuccess (serviceContent列表内元素对象属性) {String} serviceItem 服务项目名
- *
- * @apiSuccessExample {JSON} 执行成功示例:
- * {
- *      "errcode":200,
- *      "errmsg":"",
- *      "data":{
- *      }
- *  }
- */
-
-/**
- * @apiGroup 02.Sign
- * @api {POST} open/server/getServicePackageList 08、获得服务包
+ * @api {POST} open/server/getServicePackageList 06、获得服务包
  * @apiVersion 1.0.0
  * @apiName open/server/getServicePackageList
  *
@@ -619,7 +619,7 @@
  
 /**
  * @apiGroup 02.Sign
- * @api {POST} open/classPopulation/peopleTypeList 09、获取人群分类列表
+ * @api {POST} open/classPopulation/peopleTypeList 07、获取人群分类列表
  * @apiVersion 1.0.0
  * @apiName open/classPopulation/peopleTypeList
  *
@@ -645,7 +645,7 @@
 
 /**
  * @apiGroup 02.Sign
- * @api {POST} open/team/docTeamList  10、医生团队列表
+ * @api {POST} open/team/docTeamList  08、医生团队列表
  * @apiVersion 1.0.0
  * @apiName open/team/docTeamList
  *
