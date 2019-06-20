@@ -1052,7 +1052,7 @@
             "type": "String",
             "optional": false,
             "field": "keyword",
-            "description": "<p>搜索关键字（身份证号、手机号、姓名）</p>"
+            "description": "<p>搜索关键字(身份证号、手机号、姓名)</p>"
           },
           {
             "group": "功能请求参数",
@@ -1066,7 +1066,7 @@
             "type": "String",
             "optional": false,
             "field": "signState",
-            "description": "<p>签约状态（0待签约 1已签约 2已解约 9已过期 11 待审核 12 待确认 13 已驳回）</p>"
+            "description": "<p>签约状态(1已签约 2已解约 9已过期)</p>"
           },
           {
             "group": "功能请求参数",
@@ -1123,7 +1123,7 @@
             "type": "String",
             "optional": false,
             "field": "signState",
-            "description": "<p>当前签约状态（0待签约 1已签约 2已解约 9已过期 11 待审核 12 待确认 13 已驳回）</p>"
+            "description": "<p>当前签约状态(1已签约 2已解约 9已过期)</p>"
           },
           {
             "group": "list列表内元素对象属性",

@@ -142,9 +142,9 @@
  *
  * @apiParam (功能请求参数) {String} doctorToken 医生有效性校验标识
  * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识
- * @apiParam (功能请求参数) {String} keyword 搜索关键字（身份证号、手机号、姓名）
+ * @apiParam (功能请求参数) {String} keyword 搜索关键字(身份证号、手机号、姓名)
  * @apiParam (功能请求参数) {String} signType 签约类型 (1个人)
- * @apiParam (功能请求参数) {String} signState 签约状态（0待签约 1已签约 2已解约 9已过期 11 待审核 12 待确认 13 已驳回）
+ * @apiParam (功能请求参数) {String} signState 签约状态(1已签约 2已解约 9已过期)
  * @apiParam (功能请求参数) {String} currentPage 当前页
  * @apiParam (功能请求参数) {String} pageSize 页码
  *
@@ -153,7 +153,7 @@
  *
  * @apiSuccess (list列表内元素对象属性) {String} contractedUserIDCard 签约用户身份证号码
  * @apiSuccess (list列表内元素对象属性) {String} signId 签约记录号id
- * @apiSuccess (list列表内元素对象属性) {String} signState 当前签约状态（0待签约 1已签约 2已解约 9已过期 11 待审核 12 待确认 13 已驳回）
+ * @apiSuccess (list列表内元素对象属性) {String} signState 当前签约状态(1已签约 2已解约 9已过期)
  * @apiSuccess (list列表内元素对象属性) {String} name 签约用户姓名
  * @apiSuccess (list列表内元素对象属性) {String} age 签约用户年龄
  * @apiSuccess (list列表内元素对象属性) {String} sex 签约用户性别
