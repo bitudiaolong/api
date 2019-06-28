@@ -574,15 +574,8 @@
             "group": "功能请求参数",
             "type": "String",
             "optional": false,
-            "field": "userUid",
-            "description": "<p>医生Uid,医生标识</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "signId",
-            "description": "<p>签约记录号id</p>"
+            "field": "idCard",
+            "description": "<p>签约对象的身份证号</p>"
           }
         ]
       }
@@ -1985,121 +1978,6 @@
     },
     "filename": "./BasicPublicHealthDoctor.js",
     "groupTitle": "04_ChatCommunication"
-  },
-  {
-    "group": "05_HealthRoom",
-    "type": "POST",
-    "url": "open/doctor/getUserInfoByDoctor",
-    "title": "01、医生端用户列表",
-    "version": "1.0.0",
-    "name": "open_doctor_getUserInfoByDoctor",
-    "parameter": {
-      "fields": {
-        "功能请求参数": [
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "doctorUid",
-            "description": "<p>医生Uid,医生标识</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "keyword",
-            "description": "<p>用户名称搜索关键词</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "pageSize",
-            "description": "<p>每页条数</p>"
-          },
-          {
-            "group": "功能请求参数",
-            "type": "String",
-            "optional": false,
-            "field": "currentPage",
-            "description": "<p>第几页</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "data返回数据结果": [
-          {
-            "group": "data返回数据结果",
-            "type": "Object",
-            "optional": false,
-            "field": "page",
-            "description": "<p>分页对象</p>"
-          },
-          {
-            "group": "data返回数据结果",
-            "type": "Array",
-            "optional": false,
-            "field": "list",
-            "description": "<p>用户列表</p>"
-          }
-        ],
-        "list列表内数据结果": [
-          {
-            "group": "list列表内数据结果",
-            "type": "String",
-            "optional": false,
-            "field": "name",
-            "description": "<p>姓名</p>"
-          },
-          {
-            "group": "list列表内数据结果",
-            "type": "String",
-            "optional": false,
-            "field": "sex",
-            "description": "<p>性别（，女）</p>"
-          },
-          {
-            "group": "list列表内数据结果",
-            "type": "String",
-            "optional": false,
-            "field": "identityCard",
-            "description": "<p>身份证号</p>"
-          },
-          {
-            "group": "list列表内数据结果",
-            "type": "Int",
-            "optional": false,
-            "field": "age",
-            "description": "<p>年龄</p>"
-          },
-          {
-            "group": "list列表内数据结果",
-            "type": "String",
-            "optional": false,
-            "field": "populateName",
-            "description": "<p>人群分类</p>"
-          },
-          {
-            "group": "list列表内数据结果",
-            "type": "String",
-            "optional": false,
-            "field": "testDate",
-            "description": "<p>最后一次测量时间</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "执行成功示例:",
-          "content": "{\n     \"errcode\":200,\n     \"errmsg\":\"success\",\n     \"data\":{\n         \"page\":{\n             \"pageSize\":\"20\",\n             \"totalPageCount\":\"1\",\n             \"currentPage\":\"1\",\n             \"totalCount\":\"1\"\n         },\n         \"list\":[{\n             \"sex\":\"\",\n             \"name\":\"戴程云\",\n             \"identityCard\":\"320483199706244911\",\n             \"age\":21,\n             \"testDate\":\"2018-11-20\",\n             \"populateName\":\"五保户,低保户\"\n         }]\n     }\n }",
-          "type": "JSON"
-        }
-      ]
-    },
-    "filename": "./BasicPublicHealthDoctor.js",
-    "groupTitle": "05_HealthRoom"
   },
   {
     "group": "05_HealthRoom",

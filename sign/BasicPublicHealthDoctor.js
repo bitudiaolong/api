@@ -316,8 +316,7 @@
  * @apiName open/doctor/signDetail
  *
  * @apiParam (功能请求参数) {String} doctorToken 医生有效性校验标识
- * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识
- * @apiParam (功能请求参数) {String} signId 签约记录号id
+ * @apiParam (功能请求参数) {String} idCard 签约对象的身份证号
  *
  * @apiSuccess (data返回数据结果) {String} signId 签约id
  * @apiSuccess (data返回数据结果) {Int} signType 签约类型（1个人 2家庭）
@@ -826,49 +825,7 @@
  *  }
  */
 
-/**
- * @apiGroup 05.HealthRoom
- * @api {POST} open/doctor/getUserInfoByDoctor 01、医生端用户列表
- * @apiVersion 1.0.0
- * @apiName open/doctor/getUserInfoByDoctor
- *
- * @apiParam (功能请求参数) {String} doctorUid 医生Uid,医生标识
- * @apiParam (功能请求参数) {String} keyword 用户名称搜索关键词
- * @apiParam (功能请求参数) {String} pageSize 每页条数
- * @apiParam (功能请求参数) {String} currentPage 第几页
- *
- * @apiSuccess (data返回数据结果) {Object} page 分页对象
- * @apiSuccess (data返回数据结果) {Array} list 用户列表
- *
- * @apiSuccess (list列表内数据结果) {String} name 姓名
- * @apiSuccess (list列表内数据结果) {String} sex 性别（，女）
- * @apiSuccess (list列表内数据结果) {String} identityCard 身份证号
- * @apiSuccess (list列表内数据结果) {Int} age 年龄
- * @apiSuccess (list列表内数据结果) {String} populateName 人群分类
- * @apiSuccess (list列表内数据结果) {String} testDate 最后一次测量时间
- *
- * @apiSuccessExample {JSON} 执行成功示例:
- * {
- *      "errcode":200,
- *      "errmsg":"success",
- *      "data":{
- *          "page":{
- *              "pageSize":"20",
- *              "totalPageCount":"1",
- *              "currentPage":"1",
- *              "totalCount":"1"
- *          },
- *          "list":[{
- *              "sex":"",
- *              "name":"戴程云",
- *              "identityCard":"320483199706244911",
- *              "age":21,
- *              "testDate":"2018-11-20",
- *              "populateName":"五保户,低保户"
- *          }]
- *      }
- *  }
- */
+
 
 /**
  * @apiGroup 05.HealthRoom
