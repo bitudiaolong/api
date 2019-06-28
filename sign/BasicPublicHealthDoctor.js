@@ -444,11 +444,11 @@
  * @apiDescription 只要有一个已经签约,就报错,返回已经签约人的名字。   入参是Array的，用json格式的字符串。
  *
  * @apiParam (功能请求参数) {String} doctorToken 用户有效性校验标识，必填
- * @apiParam (功能请求参数) {String} userUid 医生Uid,医生标识，必填
+ * @apiParam (功能请求参数) {String} userUid 签约医生Uid,医生标识，必填
  * @apiParam (功能请求参数) {String} signType 签约类型：1个人 2家庭，必填
  * @apiParam (功能请求参数) {Array} submitSignList 签约用户的列表，必填
  *
- * @apiSuccess (submitSignList列表内元素对象属性) {String} userUid 医生Uid,医生标识，必填
+ * @apiSuccess (submitSignList列表内元素对象属性) {String} userUid 指定的随访医生Uid,必填
  * @apiSuccess (submitSignList列表内元素对象属性) {String} docTeamId 医生团队id，必填
  * @apiSuccess (submitSignList列表内元素对象属性) {String} userName 签约用户姓名，必填
  * @apiSuccess (submitSignList列表内元素对象属性) {String} householderIDCard 户主身份证号，选填。不填，字段值传空（签约类型：个人，户主身份证号传空）
@@ -657,7 +657,11 @@
  * @apiParam (list列表内元素对象属性) {String} mainDocName 主治医生名字
  * @apiParam (list列表内元素对象属性) {String} mainDocTel 主治医生联系电话
  * @apiParam (list列表内元素对象属性) {String} signCount 已签约人数
- * @apiParam (list列表内元素对象属性) {String} teamMembers 医生团队成员名字。逗号分隔字符串
+ * 
+ * @apiParam (list列表内元素对象属性) {Array} teamMembers 医生团队成员列表
+ * 
+ * @apiParam (teamMembers列表内元素对象属性) {String} id 医生id
+ * @apiParam (teamMembers列表内元素对象属性) {String} name 医生名字
  *
  * @apiSuccessExample {JSON} 执行成功示例:
  * {
@@ -670,14 +674,20 @@
  *              "mainDocName":"",
  *              "mainDocTel":"",
  *              "signCount":"",
- *              "teamMembers":""
+ *              "teamMembers":[{
+ * 					id:"",
+ * 					name:""
+ *  			}]	
  *          },{
  *              "id":"",
  *              "docTeamName":"",
  *              "mainDocName":"",
  *              "mainDocTel":"",
  *              "signCount":"",
- *              "teamMembers":""
+ *              "teamMembers":[{
+ * 					id:"",
+ * 					name:""
+ *  			}]	
  *          }]
  *      }
  *  }

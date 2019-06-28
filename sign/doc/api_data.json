@@ -1196,7 +1196,7 @@
             "type": "String",
             "optional": false,
             "field": "userUid",
-            "description": "<p>医生Uid,医生标识，必填</p>"
+            "description": "<p>签约医生Uid,医生标识，必填</p>"
           },
           {
             "group": "功能请求参数",
@@ -1223,7 +1223,7 @@
             "type": "String",
             "optional": false,
             "field": "userUid",
-            "description": "<p>医生Uid,医生标识，必填</p>"
+            "description": "<p>指定的随访医生Uid,必填</p>"
           },
           {
             "group": "submitSignList列表内元素对象属性",
@@ -1632,10 +1632,26 @@
           },
           {
             "group": "list列表内元素对象属性",
-            "type": "String",
+            "type": "Array",
             "optional": false,
             "field": "teamMembers",
-            "description": "<p>医生团队成员名字。逗号分隔字符串</p>"
+            "description": "<p>医生团队成员列表</p>"
+          }
+        ],
+        "teamMembers列表内元素对象属性": [
+          {
+            "group": "teamMembers列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>医生id</p>"
+          },
+          {
+            "group": "teamMembers列表内元素对象属性",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>医生名字</p>"
           }
         ]
       }
@@ -1644,7 +1660,7 @@
       "examples": [
         {
           "title": "执行成功示例:",
-          "content": "{\n     \"errcode\":200,\n     \"errmsg\":\"\",\n     \"data\":{\n         \"docTeamList\":[{\n             \"id\":\"\",\n             \"docTeamName\":\"\",\n             \"mainDocName\":\"\",\n             \"mainDocTel\":\"\",\n             \"signCount\":\"\",\n             \"teamMembers\":\"\"\n         },{\n             \"id\":\"\",\n             \"docTeamName\":\"\",\n             \"mainDocName\":\"\",\n             \"mainDocTel\":\"\",\n             \"signCount\":\"\",\n             \"teamMembers\":\"\"\n         }]\n     }\n }",
+          "content": "{\n     \"errcode\":200,\n     \"errmsg\":\"\",\n     \"data\":{\n         \"docTeamList\":[{\n             \"id\":\"\",\n             \"docTeamName\":\"\",\n             \"mainDocName\":\"\",\n             \"mainDocTel\":\"\",\n             \"signCount\":\"\",\n             \"teamMembers\":[{\n\t\t\t\t\tid:\"\",\n\t\t\t\t\tname:\"\"\n \t\t\t}]\t\n         },{\n             \"id\":\"\",\n             \"docTeamName\":\"\",\n             \"mainDocName\":\"\",\n             \"mainDocTel\":\"\",\n             \"signCount\":\"\",\n             \"teamMembers\":[{\n\t\t\t\t\tid:\"\",\n\t\t\t\t\tname:\"\"\n \t\t\t}]\t\n         }]\n     }\n }",
           "type": "JSON"
         }
       ]
