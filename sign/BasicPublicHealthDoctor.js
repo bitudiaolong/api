@@ -675,8 +675,8 @@
  *              "mainDocTel":"",
  *              "signCount":"",
  *              "teamMembers":[{
- * 					id:"",
- * 					name:""
+ * 					"id":"",
+ * 					"name":""
  *  			}]	
  *          },{
  *              "id":"",
@@ -685,8 +685,8 @@
  *              "mainDocTel":"",
  *              "signCount":"",
  *              "teamMembers":[{
- * 					id:"",
- * 					name:""
+ * 					"id":"",
+ * 					"name":""
  *  			}]	
  *          }]
  *      }
